@@ -4,13 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
+  <link rel="stylesheet" href="css/fonts/linecons/css/linecons.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>ObservaTudo</title>
 </head>
 <body>
+
+  <nav class="navbar navbar-dark bg-primary mb-3">
+    <div class="container">
+      <a href="#" class="navbar-brand">ObservaTudo</a>
+    </div>
+  </nav>
+
+<div class="container">
+<form class="form-inline justify-content-center">
+<div id="combo" class="row form-group ">
+    <select class="form-control" name="estado" id="estado">
+      <option value=""> Estado</option>
+      <option value="1"> Estado 1</option>
+      <option value="2"> Estado 2</option>
+    </select>
+      &nbsp;&nbsp;
+    <select class="form-control" name="cidade" id="cidade">
+      <option value=""> Selecione o estado</option>  
+    </select>
+      <input id="eixo" type="text" readonly hidden value="0"></input>
+</div>
+</form>
+<br>
+
+<div id="eixos" class="row justify-content-center">
+  <button type="button" class="btn btn-primary active" style="background-color:LightCoral" data-id="1" data-toggle="button" aria-pressed="true" autocomplete="off">
+   Saúde <i class="fa fa-heartbeat"></i>
+  </button>
+  <button type="button" class="btn btn-primary " style="background-color:LightSkyBlue" data-id="2" data-toggle="button" aria-pressed="false" autocomplete="off">
+   Educação <i class="fa fa-graduation-cap"></i>
+</button>
+  <button type="button" class="btn btn-primary " style="background-color:MediumSlateBlue" data-i="3" data-toggle="button" aria-pressed="false" autocomplete="off">
+    Assistência social <i class="fa fa-home"></i>
+  </button>
+  <button type="button" class="btn btn-primary " style="background-color:orange" data-id="4" data-toggle="button" aria-pressed="false" autocomplete="off">Segurança <i class="fa fa-shield"></i>
+  </button>
+  <button type="button" class="btn btn-primary " style="background-color:YellowGreen" data-id="5" data-toggle="button" aria-pressed="false" autocomplete="off">Meio ambiente 
+  <i class="fa fa-globe"></i>
+  <br> urbanização & mobilidade
+  <i class="fa fa-bicycle"></i>
+  </button>
+  <button type="button" class="btn btn-primary " style="background-color:DarkKhaki" data-id="6" data-toggle="button" aria-pressed="false" autocomplete="off">Economia & Finanças <i class="fa fa-money"></i>
+  </button>
+  <button type="button" class="btn btn-primary" style="background-color:DimGrey" data-id="7" data-toggle="button" aria-pressed="false" autocomplete="off">Personalizado
+  <i class="fa fa-question"></i>
+  </button>
+</div>
+
+<br>
+
+Município: <div id="municipio">Municipio</div>
+<div id="resultado_municipio"></div>
+Estado: <div id="estado">Estado</div>
+<div id="resultado_estado"></div>
+País: <div id="pais">Brasil</div>
+<div id="resultado_federal"></div>
+
+
+</div>
+
+<div class="container">
+  <div id="rodape">
+    <br>
+<center>
+<a href="https://github.com/iotaorg/Iota-RNSP" target="_blank">Iota</a> | <a href="http://www.cidadessustentaveis.org.br/" target="_blank" >Cidades sustentaveis</a> | <a href="https://github.com/JJDSNT/frontend" target="_blank">Código fonte</a>
+</center>
+<br>
+
+  </div>
+</div>
+
   
   <script src="js/easyhttp2.js"></script>
-  
+  <!-- <script src="js/estados.js"></script> -->
   <script src="js/ui.js"></script>
   <script src="js/app.js"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D1420KHL0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4D1420KHL0');
+</script>
+
+
 </body>
 </html>
